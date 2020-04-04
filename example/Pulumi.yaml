@@ -1,0 +1,3 @@
+name: pulumi-my-dynamic-provider-example
+runtime: python
+description: A sample Pulumi program which demonstrates use the pulumi-my-dynamic-provider package

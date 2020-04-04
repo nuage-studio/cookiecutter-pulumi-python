@@ -1,4 +1,16 @@
-# Getting started
+# Pulumi Dynamic Provider Template
+
+This project is a template for creating Pulumi Dynamic Providers in Python.  You should
+replace this section with a description of the project.  You should also make sure to
+update the following:
+* The folder `my_dynamic_provider` should be changed to your package name
+* The package name and URL in `setup.py` should be updated
+* The `Provider` class should be modified to represent your backend provider's configuration parameters
+* The resources and Dynamic Providers should be created following the template in the `my_resource` folder
+* The example program in `example` should be updated to demonstrate how your package is used
+* The folder structure at the bottom of this document should be updated
+
+## Getting started
 
 You need Python 3 (preferably 3.8) installed to start working on this project.
 
@@ -7,7 +19,7 @@ In order to install your virtualenv, just go to the root of the project and:
 make install
 ```
 
-# IDE
+## IDE
 
 Nuage recommends [Visual Studio Code](https://code.visualstudio.com/download) to work on this project, and some default settings have been configured in the [.vscode/settings.json](.vscode/settings.json).
 
@@ -17,7 +29,7 @@ By default, we recommend:
 1. Putting your virtualenv in a `venv` folder at the project root
 2. Using a `.env` file to define your environment variables (cf. [python-dotenv](https://pypi.org/project/python-dotenv/))
 
-# Code quality
+## Code quality
 
 This project has opinionated code-quality requirements:
 - Code formatter: [black](https://black.readthedocs.io/en/stable/)
@@ -35,3 +47,25 @@ Code quality configuration files:
 - IDE-agnostic coding style settings are set in the [.editorconfig](.editorconfig) file
 - Python-related settings are set in the [setup.cfg](setup.cfg) file
 - Pre-commit-related settings are set in the [.pre-commit-config.yaml](.pre-commit-config.yaml) file
+
+## Folder structure
+
+```
+.
+├── example                                 An example program which uses this provider package
+│   ├── __main__.py
+│   ├── Pulumi.dev.yaml
+│   ├── Pulumi.yaml
+│   └── README.md
+├── Makefile
+├── my_dynamic_provider                     The main package folder with a subfolder for each resource type
+│   ├── my_resource                         The folder for a particular resource type
+│   │   ├── my_resource_provider.py         The Pulumi resource object
+│   │   └── my_resource.py                  The Dynamic Provider for the resource
+│   └── provider.py                         The backend provider configuration object
+├── README.md
+├── requirements_dev.txt
+├── requirements.txt
+├── setup.cfg
+└── setup.py
+```

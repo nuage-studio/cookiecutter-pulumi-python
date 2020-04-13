@@ -1,3 +1,3 @@
 config:
-  pulumi-my-dynamic-provider-example:provider_param1: nuage
-  pulumi-my-dynamic-provider-example:provider_param2: some_value
+  pulumi-acme-example:provider_param1: nuage
+  pulumi-acme-example:provider_param2: some_value

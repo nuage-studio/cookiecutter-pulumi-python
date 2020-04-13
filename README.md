@@ -30,6 +30,14 @@ By default, we recommend:
 1. Putting your virtualenv in a `venv` folder at the project root
 2. Using a `.env` file to define your environment variables (cf. [python-dotenv](https://pypi.org/project/python-dotenv/))
 
+## Unit tests
+
+To run the unit tests, use the following command:
+
+```
+python setup.py test
+```
+
 ## Code quality
 
 This project has opinionated code-quality requirements:

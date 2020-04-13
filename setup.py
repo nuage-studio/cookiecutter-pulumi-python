@@ -12,4 +12,6 @@ setup(
     packages=find_packages(exclude=("example")),
     python_requires=">=3.7",
     install_requires=["pulumi>=1.8.1",],
+    test_requires=["pulumi>=1.8.1",],
+    test_suite="test",
 )

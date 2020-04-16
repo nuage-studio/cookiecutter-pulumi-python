@@ -11,4 +11,4 @@ def remove_file(filepath):
 if __name__ == '__main__':
 
     if '{{cookiecutter.use_base_class}}' != 'yes':
-        remove_file(os.path.join('{{cookiecutter.project_slug}}/base_dynamic_provider.py'))
+        remove_file(os.path.join('{{cookiecutter.project_slug|snakecase}}/base_dynamic_provider.py'))

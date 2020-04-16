@@ -4,12 +4,12 @@ from pulumi import Input, Output, ResourceOptions
 from pulumi.dynamic import Resource
 
 from ..provider import Provider
-from .{{cookiecutter.initial_resource_slug|snakecase}}_provider import {{cookiecutter.initial_resource_slug | pascalcase}}Provider
+from .auto_ml_job_provider import AutoMlJobProvider
 
 
-class {{cookiecutter.initial_resource_slug | pascalcase}}(Resource):
+class AutoMlJob(Resource):
     """
-    A {{cookiecutter.initial_resource_slug | pascalcase}} resource.
+    A AutoMlJob resource.
 
     TODO: USE THIS TEMPLATE TO CREATE RESOURCES FOR YOUR DYNAMIC PROVIDER.
     
@@ -52,7 +52,7 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}(Resource):
     ):
         provider = provider if provider else Provider()
         super().__init__(
-            provider={{cookiecutter.initial_resource_slug | pascalcase}}Provider(provider),
+            provider=AutoMlJobProvider(provider),
             name=resource_name,
             props={"param1": param1, "param2": param2, "output_param": None},
             opts=opts,

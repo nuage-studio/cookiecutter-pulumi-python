@@ -1,6 +1,6 @@
 import pulumi
-from {{cookiecutter.project_slug}} import Provider
-from {{cookiecutter.project_slug}}.{{cookiecutter.initial_resource_slug}} import {{cookiecutter.initial_resource_slug | pascalcase}}
+from {{cookiecutter.project_slug|snakecase}} import Provider
+from {{cookiecutter.project_slug|snakecase}}.{{cookiecutter.initial_resource_slug|snakecase}} import {{cookiecutter.initial_resource_slug | pascalcase}}
 
 """
 This example illustrates how Provider objects can be used to create resources under

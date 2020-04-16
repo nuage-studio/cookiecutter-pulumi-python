@@ -1,6 +1,6 @@
-# {{cookiecutter.project_display_name}} example
+# Plkfglfkg example
 
-This folder contains an example Pulumi program which demonstrates use of the `{{cookiecutter.project_slug|snakecase}}` package.
+This folder contains an example Pulumi program which demonstrates use of the `pulumi_sagemaker` package.
 
 _*TODO: Update this project with an example, and provide an explaination here.*_
 
@@ -9,7 +9,7 @@ _*TODO: Update this project with an example, and provide an explaination here.*_
 To run this example:
 
 * Install and start a VirtualEnv in this folder
-* Locally install (or reinstall) the `{{cookiecutter.project_slug|snakecase}}` package from the root directory:
+* Locally install (or reinstall) the `pulumi_sagemaker` package from the root directory:
 
 ```
 pip install -e ..

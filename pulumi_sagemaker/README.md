@@ -1,13 +1,13 @@
-# {{cookiecutter.project_display_name}}
+# Plkfglfkg
 
 _**TODO: Update this section of README.md with a description of your project**_
 
 _You should also do the following:_
-* _Update the `{{cookiecutter.project_slug|snakecase}}/provider.py` file with the parameters required by your backend provider._
-* _Update the `{{cookiecutter.project_slug|snakecase}}/{{cookiecutter.initial_resource_slug|snakecase}}` folder by implementing the {{cookiecutter.initial_resource_slug|pascalcase}} resource and provider_
-* _Update the `test/{{cookiecutter.initial_resource_slug|snakecase}}` folder with unit tests for your resource_
+* _Update the `pulumi_sagemaker/provider.py` file with the parameters required by your backend provider._
+* _Update the `pulumi_sagemaker/auto_ml_job` folder by implementing the AutoMlJob resource and provider_
+* _Update the `test/auto_ml_job` folder with unit tests for your resource_
 * _Implement any additional resources using the same pattern_
-* _Update the `example` folder with an example of the `{{cookiecutter.project_slug|snakecase}}` package being used_
+* _Update the `example` folder with an example of the `pulumi_sagemaker` package being used_
 
 ## Getting started
 
@@ -65,10 +65,10 @@ Code quality configuration files:
 │   ├── Pulumi.yaml
 │   └── README.md
 ├── Makefile
-├── {{ "%-40s" | format(cookiecutter.project_slug|snakecase,) }}The main package folder with a subfolder for each resource type
-│   ├── {{ "%-36s" | format(cookiecutter.initial_resource_slug|snakecase,) }}The folder for a particular resource type
-│   │   ├── {{ "%-32s" | format(cookiecutter.initial_resource_slug|snakecase + "_provider.py",) }}The Pulumi resource object
-│   │   └── {{ "%-32s" | format(cookiecutter.initial_resource_slug|snakecase + ".py",) }}The Dynamic Provider for the resource
+├── pulumi_sagemaker                        The main package folder with a subfolder for each resource type
+│   ├── auto_ml_job                         The folder for a particular resource type
+│   │   ├── auto_ml_job_provider.py         The Pulumi resource object
+│   │   └── auto_ml_job.py                  The Dynamic Provider for the resource
 │   └── provider.py                         The backend provider configuration object
 ├── README.md
 ├── requirements_dev.txt

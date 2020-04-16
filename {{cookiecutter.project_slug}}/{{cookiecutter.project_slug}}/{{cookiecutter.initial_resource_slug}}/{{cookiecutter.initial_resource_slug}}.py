@@ -4,15 +4,18 @@ from pulumi import Input, Output, ResourceOptions
 from pulumi.dynamic import Resource
 
 from ..provider import Provider
-from .database_provider import DatabaseProvider
+from .{{cookiecutter.initial_resource_slug}}_provider import {{cookiecutter.initial_resource_slug | pascalcase}}Provider
 
 
-class Database(Resource):
+class {{cookiecutter.initial_resource_slug | pascalcase}}(Resource):
     """
-    An example Pulumi resource for a fictional ACME Database.  Parameters are passed
-    into the constructor, which are subsequently placed into the `props` dictionary.
-    Also note that a `Provider` configuration object may be optionally passed in.  If it
-    is not given, a default instance is constructed.
+    A {{cookiecutter.initial_resource_slug | pascalcase}} resource.
+
+    TODO: USE THIS TEMPLATE TO CREATE RESOURCES FOR YOUR DYNAMIC PROVIDER.
+    
+    Parameters are passed into the constructor, which are subsequently placed into the
+    `props` dictionary.  Also note that a `Provider` configuration object may be
+    optionally passed in.  If it is not given, a default instance is constructed.
 
     Any Pulumi outputs should be declared as instance variables to allow
     for strong typing.  Note that this typically includes some of the inputs as well,
@@ -49,7 +52,7 @@ class Database(Resource):
     ):
         provider = provider if provider else Provider()
         super().__init__(
-            provider=DatabaseProvider(provider),
+            provider={{cookiecutter.initial_resource_slug | pascalcase}}Provider(provider),
             name=resource_name,
             props={"param1": param1, "param2": param2, "output_param": None},
             opts=opts,

@@ -4,14 +4,14 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-    name="pulumi_acme",
+    name="{{cookiecutter.project_slug}}",
     version="0.0.1",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/cloudspeak/pulumi-dynamic-provider-python",
+    url="{{cookiecutter.project_url}}",
     packages=find_packages(exclude=("example")),
     python_requires=">=3.7",
-    install_requires=["pulumi>=1.8.1",],
-    test_requires=["pulumi>=1.8.1",],
+    install_requires=["pulumi>=1.8.1",{% if cookiecutter.include_aws == "yes" %}"pulumi-aws>=1.0.0",{% endif %}],
+    test_requires=["pulumi>=1.8.1",{% if cookiecutter.include_aws == "yes" %}"pulumi-aws>=1.0.0",{% endif %}],
     test_suite="test",
 )

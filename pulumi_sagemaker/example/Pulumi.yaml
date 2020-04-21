@@ -1,3 +1,0 @@
-name: pulumi_sagemaker_example
-runtime: python
-description: A sample Pulumi program which demonstrates use the pulumi_sagemaker package

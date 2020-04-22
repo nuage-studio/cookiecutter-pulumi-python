@@ -19,7 +19,7 @@ Cookiecutter will then prompt you for a number of inputs:
 | `project_slug`          | The name of the project in `snake_case`, e.g. `pulumi_snowflake`                                      |
 | `project_display_name`  | The friendly name of the project, e.g. "Pulumi Snowflake Dynamic Provider"                            |
 | `project_url`           | The URL of the project, e.g. https://github.com/nuage-studio/pulumi-snowflake                         |
-| `include_aws`           | If "yes", then `pulumi_aws` is included as a dependency                                               |
+| `backend_provider`      | If an option other than "none" is chosen, then backend provider dependencies are included.  Currently, only "aws" is supported. |
 | `aws_region`            | The AWS region to be used in the config, e.g. "eu-west-1".  If AWS is not being used, enter "none".   |
 | `use_base_class`        | If "yes", an empty base class for dynamic providers is created to keep shared functionality           |
 | `initial_resource_slug` | The name of the first resource in `snake_case`, e.g. `table`                                          |
@@ -31,10 +31,10 @@ $ cookiecutter gh nuage-studio/pulumi-dynamic-provider-python
 project_slug: pulumi_sagemaker
 project_display_name: Pulumi Sagemaker Dynamic Provider
 project_url: https://github.com/nuage-studio/pulumi-sagemaker
-Select include_aws:
-1 - yes
-2 - no
-Choose from 1, 2 [1]: 1
+Select backend_provider:
+1 - none
+2 - aws
+Choose from 1, 2 [1]: 2
 aws_region: eu-west-1
 Select use_base_class:
 1 - yes

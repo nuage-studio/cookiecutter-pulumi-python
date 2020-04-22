@@ -11,7 +11,7 @@ setup(
     url="{{cookiecutter.project_url}}",
     packages=find_packages(exclude=("example")),
     python_requires=">=3.7",
-    install_requires=["pulumi>=1.8.1",{% if cookiecutter.include_aws == "yes" %}"pulumi-aws>=1.0.0",{% endif %}],
-    test_requires=["pulumi>=1.8.1",{% if cookiecutter.include_aws == "yes" %}"pulumi-aws>=1.0.0",{% endif %}],
+    install_requires=["pulumi>=1.8.1",{% if cookiecutter.backend_provider == "aws" %}"pulumi-aws>=1.0.0",{% endif %}],
+    test_requires=["pulumi>=1.8.1",{% if cookiecutter.backend_provider == "aws" %}"pulumi-aws>=1.0.0",{% endif %}],
     test_suite="test",
 )

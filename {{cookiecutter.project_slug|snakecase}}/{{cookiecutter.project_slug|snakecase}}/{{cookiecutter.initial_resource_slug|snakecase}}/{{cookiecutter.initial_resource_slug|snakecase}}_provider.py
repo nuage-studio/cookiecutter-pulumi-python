@@ -1,11 +1,11 @@
 import pulumi
-from pulumi.dynamic import CreateResult, {% if cookiecutter.use_base_class != "yes" %}ResourceProvider, {% endif %}UpdateResult
+from pulumi.dynamic import CreateResult, {% if cookiecutter.use_default_base_class != "yes" %}ResourceProvider, {% endif %}UpdateResult
 
-{% if cookiecutter.use_base_class == "yes" %}from ..base_dynamic_provider import BaseDynamicProvider
+{% if cookiecutter.use_default_base_class == "yes" %}from ..base_dynamic_provider import BaseDynamicProvider
 {% endif -%}
 from ..provider import Provider
 
-{% if cookiecutter.use_base_class == "yes" %}
+{% if cookiecutter.use_default_base_class == "yes" %}
 class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(BaseDynamicProvider):
     """
     The provider for a {{cookiecutter.initial_resource_slug | pascalcase}} resource.

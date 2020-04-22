@@ -21,7 +21,7 @@ Cookiecutter will then prompt you for a number of inputs:
 | `project_url`           | The URL of the project, e.g. https://github.com/nuage-studio/pulumi-snowflake                         |
 | `backend_provider`      | If an option other than "none" is chosen, then backend provider dependencies are included.  Currently, only "aws" is supported. |
 | `aws_region`            | The AWS region to be used in the config, e.g. "eu-west-1".  If AWS is not being used, enter "none".   |
-| `use_base_class`        | If "yes", an empty base class for dynamic providers is created to keep shared functionality           |
+| `use_default_base_class`| If "yes", an empty base class for dynamic providers is created to keep shared functionality.  This should be the default option.           |
 | `initial_resource_slug` | The name of the first resource in `snake_case`, e.g. `table`                                          |
 
 An example usage is as follows:
@@ -36,7 +36,7 @@ Select backend_provider:
 2 - aws
 Choose from 1, 2 [1]: 2
 aws_region: eu-west-1
-Select use_base_class:
+Select use_default_base_class:
 1 - yes
 2 - no
 Choose from 1, 2 [1]: 1

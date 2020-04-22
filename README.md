@@ -24,13 +24,13 @@ Cookiecutter will then prompt you for a number of inputs:
 | `use_default_base_class`| If "yes", an empty base class for dynamic providers is created to keep shared functionality.  This should be the default option.           |
 | `initial_resource_slug` | The name of the first resource in `snake_case`, e.g. `table`                                          |
 
-An example usage is as follows:
+For example, consider the following example.  We wish to write a dynamic provider for a service called "ACME".  One of the resources which we can create through the ACME service is a "database".  Thus, we might give the following input:
 
 ```
 $ cookiecutter gh nuage-studio/pulumi-dynamic-provider-python
-project_slug: pulumi_sagemaker
-project_display_name: Pulumi Sagemaker Dynamic Provider
-project_url: https://github.com/nuage-studio/pulumi-sagemaker
+project_slug: pulumi_acme
+project_display_name: Pulumi Dynamic Provider for ACME service
+project_url: https://github.com/acme/pulumi-acme
 Select backend_provider:
 1 - none
 2 - aws
@@ -40,33 +40,33 @@ Select use_default_base_class:
 1 - yes
 2 - no
 Choose from 1, 2 [1]: 1
-initial_resource_slug: AutoMlJob
+initial_resource_slug: database
 ```
 
-This will generate a directory with the chosen project name, with the following folder
+This will generate a directory with the chosen project name, and the following folder
 structure:
 
 ```
-├── pulumi_sagemaker                            Root project directory
-│   ├── example                                 An example Pulumi program which uses this provider package
-│   │   ├── __main__.py
-│   │   ├── Pulumi.dev.yaml
-│   │   ├── Pulumi.yaml
-│   │   └── README.md
-│   ├── Makefile
-│   ├── pulumi_sagemaker                        The main package folder with a subfolder for each resource type
-│   │   ├── auto_ml_job                         The folder for a particular resource type
-│   │   │   ├── auto_ml_job_provider.py         The Pulumi resource object
-│   │   │   └── auto_ml_job.py                  The Dynamic Provider for the resource
-│   │   ├── base_dynamic_provider.py
-│   │   └── provider.py
-│   ├── README.md
-│   ├── requirements_dev.txt
-│   ├── setup.cfg
-│   ├── setup.py
-│   └── test                                    Unit tests for the dynamic providers
-│       └── auto_ml_job
-│           └── auto_ml_job_provider_tests.py
+.                                       Root project directory
+├── example                             An example Pulumi program which uses this provider package
+│   ├── __main__.py
+│   ├── Pulumi.dev.yaml
+│   ├── Pulumi.yaml
+│   └── README.md
+├── Makefile
+├── pulumi_acme                         The main package folder with a subfolder for each resource type
+│   ├── base_dynamic_provider.py        The base class for all dynamic providers (if enabled)
+│   ├── database                        The folder for a particular resource type
+│   │   ├── database_provider.py        The Dynamic Provider for the resource
+│   │   └── database.py                 The Pulumi resource object
+│   └── provider.py
+├── README.md
+├── requirements_dev.txt
+├── setup.cfg
+├── setup.py
+└── test                                Unit tests for the dynamic providers
+    └── database
+        └── database_provider_tests.py
 ├── README.md
 ```
 

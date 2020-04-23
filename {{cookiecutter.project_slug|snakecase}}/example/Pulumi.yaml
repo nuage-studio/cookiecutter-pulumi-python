@@ -1,0 +1,3 @@
+name: {{cookiecutter.project_slug|snakecase}}_example
+runtime: python
+description: A sample Pulumi program which demonstrates use the {{cookiecutter.project_slug|snakecase}} package

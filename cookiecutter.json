@@ -1,0 +1,10 @@
+{
+    "project_slug": null,
+    "project_display_name": null,
+    "project_url": null,
+    "backend_provider": ["none", "aws"],
+    "aws_region": null,
+    "use_default_base_class": ["yes", "no"],
+    "initial_resource_slug": null,
+    "_extensions": ["jinja2_stringcase.StringCaseExtension"]
+}

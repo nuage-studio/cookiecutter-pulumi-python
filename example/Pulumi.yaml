@@ -1,3 +1,0 @@
-name: pulumi-acme-example
-runtime: python
-description: A sample Pulumi program which demonstrates use the pulumi-acme package

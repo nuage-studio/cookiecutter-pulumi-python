@@ -1,0 +1,5 @@
+config:
+  {% if cookiecutter.backend_provider == "aws" %}aws:region: {{cookiecutter.aws_region}}
+  {% endif -%}
+  {{cookiecutter.project_slug|snakecase}}_example:provider_param1: nuage
+  {{cookiecutter.project_slug|snakecase}}_example:provider_param2: some_value

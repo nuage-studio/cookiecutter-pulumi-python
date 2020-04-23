@@ -1,6 +1,3 @@
-exclude:
-  ^\{\{cookiecutter\.project_slug\|snakecase\}\}/
-
 repos:
   - repo: https://github.com/psf/black
     rev: 19.10b0

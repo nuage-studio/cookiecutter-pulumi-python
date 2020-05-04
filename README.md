@@ -9,7 +9,7 @@ pip install cookiecutter
 Then, use the following command to create a new dynamic provider project:
 
 ```
-cookiecutter gh nuage-studio/pulumi-dynamic-provider-python
+cookiecutter gh:nuage-studio/pulumi-dynamic-provider-python
 ```
 
 Cookiecutter will then prompt you for a number of inputs:

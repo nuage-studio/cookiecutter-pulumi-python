@@ -14,7 +14,7 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(BaseDynamicPro
 
     You should implement the `create`, `diff`, `update` and `delete` methods as
     necessary.  The `Provider` instance which is passed through the constructor should
-    define the configuration used to commuciate with the backend service.  It is made
+    define the configuration used to communicate with the backend service.  It is made
     available by the base class through the
     `provider_params` attribute.
 
@@ -33,7 +33,7 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(ResourceProvid
 
     You should implement the `create`, `diff`, `update` and `delete` methods as
     necessary.  The `Provider` instance which is passed through the constructor should
-    define the configuration used to commuciate with the backend service.
+    define the configuration used to communicate with the backend service.
 
     See https://www.pulumi.com/docs/intro/concepts/programming-model/#dynamicproviders
     for more information.

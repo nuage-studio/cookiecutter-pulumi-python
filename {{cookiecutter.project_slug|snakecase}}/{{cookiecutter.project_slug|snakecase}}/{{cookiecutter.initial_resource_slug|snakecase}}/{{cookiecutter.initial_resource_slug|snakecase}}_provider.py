@@ -9,7 +9,7 @@ from ..provider import Provider
 class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(BaseDynamicProvider):
     """
     The provider for a {{cookiecutter.initial_resource_slug | pascalcase}} resource.
-    
+
     TODO: USE THIS TEMPLATE TO CREATE RESOURCE PROVIDERS FOR YOUR DYNAMIC PROVIDER.
 
     You should implement the `create`, `diff`, `update` and `delete` methods as
@@ -42,7 +42,6 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(ResourceProvid
     def __init__(self, provider_params: Provider):
         self.provider_params = provider_params
 {% endif %}
-
     def create(self, inputs):
 
         pulumi.info(

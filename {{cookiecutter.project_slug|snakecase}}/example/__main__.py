@@ -18,6 +18,8 @@ pulumi.export("ResourceOutput1", resource1.output_param)
 
 provider = Provider(provider_param1="blah")
 
-resource2 = {{cookiecutter.initial_resource_slug | pascalcase}}("ExampleResource2", param1="456", param2="xyz", provider=provider)
+resource2 = {{cookiecutter.initial_resource_slug | pascalcase}}(
+    "ExampleResource2", param1="456", param2="xyz", provider=provider
+)
 
 pulumi.export("ResourceOutput2", resource2.output_param)

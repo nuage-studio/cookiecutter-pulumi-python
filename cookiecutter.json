@@ -3,7 +3,7 @@
     "project_display_name": null,
     "project_url": null,
     "use_github_actions_workflow": ["yes", "no"],
-    "github_username": null,
+    "github_repo_username": null,
     "github_repo_name": null,
     "backend_provider": ["none", "aws"],
     "aws_region": null,

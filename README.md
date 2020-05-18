@@ -20,7 +20,7 @@ Cookiecutter will then prompt you for a number of inputs:
 | `project_display_name`        | The friendly name of the project, e.g. "Pulumi Snowflake Dynamic Provider"                                                        |
 | `project_url`                 | The URL of the project, e.g. https://github.com/nuage-studio/pulumi-snowflake                                                     |
 | `use_github_actions_workflow` | If "yes", a Github Actions workflow is included which will run style checkers and unit tests when pushing to master.              |
-| `github_username`             | The Github username for the repo, which is used for an Actions build status badge in the README. Ignored if not using Actions.    |
+| `github_repo_username`        | The Github username for the repo, which is used for an Actions build status badge in the README. Ignored if not using Actions.    |
 | `github_repo_name`            | The Github repository name, which is used for an Actions build status badge in the README. Ignored if not using Actions.          |
 | `backend_provider`            | If an option other than "none" is chosen, then backend provider dependencies are included.  Currently, only "aws" is supported.   |
 | `aws_region`                  | The AWS region to be used in the config, e.g. "eu-west-1".  If AWS is not being used, enter "none".                               |
@@ -38,7 +38,7 @@ Select use_github_actions_workflow:
 1 - yes
 2 - no
 Choose from 1, 2 [1]: 1
-github_username: acme
+github_repo_username: acme
 github_repo_name: pulumi-acme
 Select backend_provider:
 1 - none

@@ -63,7 +63,8 @@ Code quality configuration files:
 
 ```
 .
-├── example                                 An example program which uses this provider package
+{% if cookiecutter.use_github_actions_workflow == "yes" %}├── .github/workflow/on_push.yml            The Github Actions workflow
+{% endif %}├── example                                 An example program which uses this provider package
 │   ├── __main__.py
 │   ├── Pulumi.dev.yaml
 │   ├── Pulumi.yaml

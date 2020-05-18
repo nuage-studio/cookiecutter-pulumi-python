@@ -2,6 +2,7 @@
     "project_slug": null,
     "project_display_name": null,
     "project_url": null,
+    "use_github_actions_workflow": ["yes", "no"],
     "backend_provider": ["none", "aws"],
     "aws_region": null,
     "use_default_base_class": ["yes", "no"],

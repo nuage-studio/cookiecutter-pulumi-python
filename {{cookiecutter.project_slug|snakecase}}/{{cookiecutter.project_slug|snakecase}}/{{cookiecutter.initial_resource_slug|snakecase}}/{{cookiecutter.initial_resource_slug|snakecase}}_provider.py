@@ -28,7 +28,7 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(BaseDynamicPro
 class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(ResourceProvider):
     """
     The provider for a {{cookiecutter.initial_resource_slug | pascalcase}} resource.
-    
+
     TODO: USE THIS TEMPLATE TO CREATE RESOURCE PROVIDERS FOR YOUR DYNAMIC PROVIDER.
 
     You should implement the `create`, `diff`, `update` and `delete` methods as

@@ -1,5 +1,9 @@
 # {{cookiecutter.project_display_name}}
 
+{%- if cookiecutter.use_github_actions_workflow == "yes" %}
+![Build badge](https://img.shields.io/github/workflow/status/{{cookiecutter.github_username}}/{{cookiecutter.github_repo_name}}/on_push "Build badge")
+{% endif %}
+
 _**TODO: Update this section of README.md with a description of your project**_
 
 _You should also do the following:_

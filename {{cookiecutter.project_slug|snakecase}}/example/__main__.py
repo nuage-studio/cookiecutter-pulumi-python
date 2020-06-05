@@ -1,11 +1,11 @@
-import pulumi
-from {{cookiecutter.project_slug|snakecase}} import Provider
-from {{cookiecutter.project_slug|snakecase}}.{{cookiecutter.initial_resource_slug|snakecase}} import {{cookiecutter.initial_resource_slug | pascalcase}}
-
 """
 This example illustrates how Provider objects can be used to create resources under
 different environmental configuration.
 """
+
+import pulumi
+from {{cookiecutter.project_slug|snakecase}} import Provider
+from {{cookiecutter.project_slug|snakecase}}.{{cookiecutter.initial_resource_slug|snakecase}} import {{cookiecutter.initial_resource_slug | pascalcase}}
 
 # No provider given - uses default values from config (See Provider class for more info)
 

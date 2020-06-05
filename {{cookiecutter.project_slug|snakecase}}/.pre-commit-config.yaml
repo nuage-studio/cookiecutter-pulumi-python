@@ -17,6 +17,13 @@ repos:
     rev: v4.3.21
     hooks:
       - id: isort
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.3.1
+    hooks:
+    - id: pylint
+      language: system
+      args:
+      - --rcfile=setup.cfg
   - repo: https://gitlab.com/pycqa/flake8
     rev: 3.7.9
     hooks:

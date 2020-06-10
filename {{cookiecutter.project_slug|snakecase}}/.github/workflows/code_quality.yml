@@ -1,4 +1,4 @@
-{% raw %}name: coding_quality
+{% raw %}name: code_quality
 
 # This is a Github Action workflow which checks code quality using pylint
 # (via pre-commit) whenever a commit is made to master

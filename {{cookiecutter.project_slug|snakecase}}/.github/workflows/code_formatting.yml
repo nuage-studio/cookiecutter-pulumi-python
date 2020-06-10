@@ -1,4 +1,4 @@
-{% raw %}name: coding_formatting
+{% raw %}name: code_formatting
 
 # This is a Github Action workflow which fixes code formatting using black and others
 # (via pre-commit) whenever a commit is made to master

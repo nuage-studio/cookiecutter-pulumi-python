@@ -1,7 +1,10 @@
 # {{cookiecutter.project_display_name}}
 
 {%- if cookiecutter.use_github_actions_workflow == "yes" %}
-![Build badge](https://img.shields.io/github/workflow/status/{{cookiecutter.github_repo_username}}/{{cookiecutter.github_repo_name}}/on_push "Build badge")
+![Code formatting badge](https://img.shields.io/github/workflow/status/{{cookiecutter.github_repo_username}}/{{cookiecutter.github_repo_name}}/code_formatting?label=code%20formatting "Code formatting badge")
+![Code quality badge](https://img.shields.io/github/workflow/status/{{cookiecutter.github_repo_username}}/{{cookiecutter.github_repo_name}}/code_quality?label=code%20quality "Code quality badge")
+![Coding style badge](https://img.shields.io/github/workflow/status/{{cookiecutter.github_repo_username}}/{{cookiecutter.github_repo_name}}/coding_style?label=coding%20style "Coding style badge")
+![Unit tests badge](https://img.shields.io/github/workflow/status/{{cookiecutter.github_repo_username}}/{{cookiecutter.github_repo_name}}/unit_tests?label=unit%20tests "Unit tests badge")
 {% endif %}
 
 _**TODO: Update this section of README.md with a description of your project**_

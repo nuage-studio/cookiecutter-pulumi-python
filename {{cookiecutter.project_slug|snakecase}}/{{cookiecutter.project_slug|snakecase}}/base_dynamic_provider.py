@@ -10,5 +10,5 @@ class BaseDynamicProvider(ResourceProvider):
     """
 
     def __init__(self, provider_params: Provider):
-        super(BaseDynamicProvider, super).__init__()
+        super(BaseDynamicProvider, self).__init__()
         self.provider_params = provider_params

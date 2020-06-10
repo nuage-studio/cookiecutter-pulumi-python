@@ -4,9 +4,8 @@ import pulumi
 from pulumi.dynamic import CreateResult, {% if cookiecutter.use_default_base_class != "yes" %}ResourceProvider, {% endif %}UpdateResult
 
 {% if cookiecutter.use_default_base_class == "yes" %}from ..base_dynamic_provider import BaseDynamicProvider
-{% endif -%}
-from ..provider import Provider
-
+{% else %}from ..provider import Provider
+{% endif %}
 {% if cookiecutter.use_default_base_class == "yes" %}
 class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(BaseDynamicProvider):
     """
@@ -23,9 +22,6 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(BaseDynamicPro
     See https://www.pulumi.com/docs/intro/concepts/programming-model/#dynamicproviders
     for more information.
     """
-
-    def __init__(self, provider_params: Provider):
-        super(MyResourceProvider, self).__init__()
 {% else %}
 class {{cookiecutter.initial_resource_slug | pascalcase}}Provider(ResourceProvider):
     """

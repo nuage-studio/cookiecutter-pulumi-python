@@ -4,6 +4,10 @@ from {{cookiecutter.project_slug|snakecase}}.{{cookiecutter.initial_resource_slu
 
 
 class {{cookiecutter.initial_resource_slug | pascalcase}}ProviderProviderTests(unittest.TestCase):
+    """
+    Unit tests for the {{cookiecutter.initial_resource_slug | pascalcase}}Provider class
+    """
+
     def test_outputs_are_set(self):
         provider = MockProvider(provider_param1="value1", provider_param2="value2")
         {{cookiecutter.initial_resource_slug|snakecase}}_provider = {{cookiecutter.initial_resource_slug | pascalcase}}Provider(provider)
@@ -17,6 +21,10 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}ProviderProviderTests(u
 
 
 class MockProvider:
+    """
+    Mock for Provider class
+    """
+
     def __init__(self, provider_param1, provider_param2):
         self.provider_param1 = provider_param1
         self.provider_param2 = provider_param2

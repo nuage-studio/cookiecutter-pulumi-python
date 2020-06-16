@@ -14,15 +14,18 @@ cookiecutter gh:nuage-studio/pulumi-dynamic-provider-python
 
 Cookiecutter will then prompt you for a number of inputs:
 
-|                         |                                                                                                       |
-| ---                     | ---                                                                                                   |
-| `project_slug`          | The name of the project in `snake_case`, e.g. `pulumi_snowflake`                                      |
-| `project_display_name`  | The friendly name of the project, e.g. "Pulumi Snowflake Dynamic Provider"                            |
-| `project_url`           | The URL of the project, e.g. https://github.com/nuage-studio/pulumi-snowflake                         |
-| `backend_provider`      | If an option other than "none" is chosen, then backend provider dependencies are included.  Currently, only "aws" is supported. |
-| `aws_region`            | The AWS region to be used in the config, e.g. "eu-west-1".  If AWS is not being used, enter "none".   |
-| `use_default_base_class`| If "yes", an empty base class for dynamic providers is created to keep shared functionality.  This should be the default option.           |
-| `initial_resource_slug` | The name of the first resource in `snake_case`, e.g. `table`                                          |
+|                               |                                                                                                                                   |
+| ---                           | ---                                                                                                                               |
+| `project_slug`                | The name of the project in `snake_case`, e.g. `pulumi_snowflake`                                                                  |
+| `project_display_name`        | The friendly name of the project, e.g. "Pulumi Snowflake Dynamic Provider"                                                        |
+| `project_url`                 | The URL of the project, e.g. https://github.com/nuage-studio/pulumi-snowflake                                                     |
+| `use_github_actions_workflow` | If "yes", a Github Actions workflow is included which will run style checkers and unit tests when pushing to master.              |
+| `github_repo_username`        | The Github username for the repo, which is used for an Actions build status badge in the README. Ignored if not using Actions.    |
+| `github_repo_name`            | The Github repository name, which is used for an Actions build status badge in the README. Ignored if not using Actions.          |
+| `backend_provider`            | If an option other than "none" is chosen, then backend provider dependencies are included.  Currently, only "aws" is supported.   |
+| `aws_region`                  | The AWS region to be used in the config, e.g. "eu-west-1".  If AWS is not being used, enter "none".                               |
+| `use_default_base_class`      | If "yes", an empty base class for dynamic providers is created to keep shared functionality.  This should be the default option.  |
+| `initial_resource_slug`       | The name of the first resource in `snake_case`, e.g. `table`                                                                      |
 
 For example, consider the following example.  We wish to write a dynamic provider for a service called "ACME".  One of the resources which we can create through the ACME service is a "database".  Thus, we might give the following input:
 
@@ -31,6 +34,12 @@ $ cookiecutter gh nuage-studio/pulumi-dynamic-provider-python
 project_slug: pulumi_acme
 project_display_name: Pulumi Dynamic Provider for ACME service
 project_url: https://github.com/acme/pulumi-acme
+Select use_github_actions_workflow:
+1 - yes
+2 - no
+Choose from 1, 2 [1]: 1
+github_repo_username: acme
+github_repo_name: pulumi-acme
 Select backend_provider:
 1 - none
 2 - aws
@@ -48,6 +57,7 @@ structure:
 
 ```
 .                                       Root project directory
+├── .github/workflow/on_push.yml        The Github Actions workflow
 ├── example                             An example Pulumi program which uses this provider package
 │   ├── __main__.py
 │   ├── Pulumi.dev.yaml

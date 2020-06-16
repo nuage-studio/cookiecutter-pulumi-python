@@ -12,7 +12,7 @@ class {{cookiecutter.initial_resource_slug | pascalcase}}(Resource):
     A {{cookiecutter.initial_resource_slug | pascalcase}} resource.
 
     TODO: USE THIS TEMPLATE TO CREATE RESOURCES FOR YOUR DYNAMIC PROVIDER.
-    
+
     Parameters are passed into the constructor, which are subsequently placed into the
     `props` dictionary.  Also note that a `Provider` configuration object may be
     optionally passed in.  If it is not given, a default instance is constructed.
